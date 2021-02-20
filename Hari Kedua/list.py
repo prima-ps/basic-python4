@@ -9,9 +9,9 @@ print(mylist[1])
 print(mylist[2])
 
 for x in mylist:
-    print(x, end=" ") #end digunakan agar bisa diprint kesamping
+    print(x) #end digunakan agar bisa diprint kesamping
 
-angka=1
-for x in range(0,10):
-    print(angka)
-    angka= angka+1
+# angka=1
+# for x in range(0,10):
+    # print(angka)
+    # angka= angka+1
