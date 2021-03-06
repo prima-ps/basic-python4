@@ -27,12 +27,12 @@ while button!=5:
         x+=1
         print("Kontak berhasil ditambahkan")
         input("Press enter to continue")
-    if button==2:
+    elif button==2:
         print("Data email yang sudah ditambahkan: ")
         for a in range(len(alamat_penerima)):
             print(a+1,". ",alamat_penerima[a])
         input("Press enter to continue")
-    if button==3:
+    elif button==3:
         msg = MIMEMultipart()
         msg['Subject'] = input("Masukkan subject: ")
         body = input("Masukkan pesan: ")
@@ -44,13 +44,13 @@ while button!=5:
             msg.attach(MIMEText(body, 'plain'))
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
-            server.login(fromaddr, "mangaprima")
+            server.login(fromaddr, password)
             text = msg.as_string()
             server.sendmail(fromaddr, toaddr, text)
             server.quit()
         print("Pesan berhasil terkirim")
         input("Press enter to continue")
-    if button==4:
+    elif button==4:
         open('D:/Python/basic-python4/Final-Project/receiver_list.txt', 'w').close()
         alamat_penerima.clear()
         x=0
