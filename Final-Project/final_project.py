@@ -55,6 +55,8 @@ while button!=5:
         alamat_penerima.clear()
         x=0
         input("Press enter to continue")
+    elif button==5:
+        print("Keluar dari program")
     else :
         print("error")
 
